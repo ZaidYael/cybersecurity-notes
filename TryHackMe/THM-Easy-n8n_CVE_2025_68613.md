@@ -46,7 +46,7 @@ Se construyó un payload malicioso estructurado de la siguiente forma para forza
 El comando se ha ejecutado con éxito y podemos observar que hay un archivo **flag.txt**. Ejecutando ahora `cat flag.txt` nos muestra la flag que búscabamos. 
 
 
-###Detección y Acción 
+### Detección y Acción 
 
 Para identificar si nuestro sistema ha sido expuesto a esta vulnerabilidad debemos primero revisar si está dentro del rango de versiones afectadas, en caso de confirmar esto debemos buscar pistas que nos indiquen si se ha vulnerado nuestro sistema. 
 Una forma rápida y sencilla de hacer esto es mediante la búsqueda de palabras clave asociadas a vulnerar nuestro sistema, por ejemplo: 
@@ -59,10 +59,10 @@ grep -r "child_process" /path/to/n8n/workflows/
 grep -r "binding(" /path/to/n8n/workflows/
 grep -r "_load(" /path/to/n8n/workflows/
 ```
-Para confirmar que nuestro sistema se encuntre libre de ataques debemos revisar los logs donde buscaremos: 
+Para confirmar que nuestro sistema se encuentre libre de ataques debemos revisar los logs donde buscaremos: 
 
 + Ejecuciones de comandos inusuales.
-+ Conexiones a travéz de procesos de n8n.
++ Conexiones a través de procesos de n8n.
 + Acceso a información privilegiada.
 + Evaluación de expresiones fallida, lo cuál puede indicar intentos de exploit.
 
