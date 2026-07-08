@@ -7,6 +7,6 @@ En esta sección se encuentran los reportes técnicos de las salas y rutas compl
 
 | Laboratorio / Máquina | Dificultad | Tecnologías / Enfoque Principal | Reporte Técnico |
 | :--- | :---: | :--- | :---: |
-| **Startup** (THM) | Fácil | Enumeración FTP, Web Exploit, Cronjobs Linux | [Ver Reporte](./THM-Easy-Startup.md) |
+| **PickleRick** (THM) | Fácil | Web Enumeration, Gobuster, Command Injection Bypass (`less`), Linux PrivEsc (`sudo -l`) | [Ver Reporte](./THM-Easy-PickleRickk.md) |
 | **Kenobi** (THM) | Fácil | Samba Enumeration, ProFTPd Exploit, SUID | [Ver Reporte](./THM-Easy-Kenobi.md) |
 | **SQLi Advance** | Medio | SQL Injection Avanzado, Automatización Python | [Ver Reporte](./THM-Web-SQLiAdvance.md) |
