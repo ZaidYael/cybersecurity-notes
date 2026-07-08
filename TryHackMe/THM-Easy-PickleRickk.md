@@ -38,7 +38,7 @@ Se observa el resultado del escaneo con los puertos 22 y 80 abiertos
 Gracias a que encontramos que el puerto 80 está abierto podemos deducir que hay una página web en la ip destino. 
 Una vez dentro de la página utilizamos la herramienta de inspeccionar la página en busca de alguna pista. 
 
-![Captura de inspección web]()
+![Captura de inspección web](img/web-inspection.png)
 
 Encontramos el usuario R1ckRul3s, ahora usaremos gobuster para encontrar otros archivos y páginas. 
 
@@ -50,7 +50,7 @@ Dentro del archivo robots.txt se encuentra lo que parece ser la contraseña: Wub
 
 Finalmente logramos acceder al portal principal donde encontramos un command panel donde podemos interactuar con el sistema linux, ejecutamos el comando `ls`  y encontramos el siguiente archivo de interés Sup3rS3cretPickl3Ingred.txt, debido a que el comando `cat` está bloqueado usaremos el comando `less` para ver el contenido del archivo. 
 
-![Captura primer ingrediente]()
+![Captura primer ingrediente](img/primer-ingrediente.png)
 
 También se encuentra el archivo clue.txt el cual nos indica que debemos buscar el próximo ingrediente dentro del sistema. 
 
