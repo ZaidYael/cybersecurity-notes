@@ -8,5 +8,5 @@ En esta sección se encuentran los reportes técnicos de las salas y rutas compl
 | Laboratorio / Máquina | Dificultad | Tecnologías / Enfoque Principal | Reporte Técnico |
 | :--- | :---: | :--- | :---: |
 | **PickleRick** (THM) | Fácil | Web Enumeration, Gobuster, Command Injection Bypass (`less`), Linux PrivEsc (`sudo -l`) | [Ver Reporte](./THM-Easy-PickleRickk.md) |
-| **Kenobi** (THM) | Fácil | Samba Enumeration, ProFTPd Exploit, SUID | [Ver Reporte](./THM-Easy-Kenobi.md) |
+| **n8n CVE 2025 68613** (THM) | Fácil | CVE Analysis, Remote Code Execution (RCE), Vulnerability Exploitation | [Ver Reporte](./THM-Easy-n8n_CVE_2025_68613.md) |
 | **SQLi Advance** | Medio | SQL Injection Avanzado, Automatización Python | [Ver Reporte](./THM-Web-SQLiAdvance.md) |
