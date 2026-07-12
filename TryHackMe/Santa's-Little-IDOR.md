@@ -35,14 +35,12 @@ Esta dependencia directa de un número secuencial o ID expuesto es el indicador 
 ### Prueba de Concepto (PoC)
 Para confirmar la vulnerabilidad, se procedió a realizar una manipulación manual del parámetro. Desde la ventana de **Storage** dentro de las Developer Tools se modificó el valor original del identificador en la petición web por uno inmediatamente posterior.
 
-![Captura ventana local storage]()
+![Captura ventana local storage](img/Storage_window.png)
 
 El servidor procesó la solicitud **sin verificar si el usuario actual tenía autorización** para ver ese objeto, devolviendo en pantalla los datos privados correspondientes a una cuenta ajena.
 
 ### Buscando posibles IDOR
 No siempre los IDOR son tan sencillos como apreciar un número y cambiarlo, dentro del laboratorio se nos muestra la técnica de **Encoding** donde se cifra el valor de nuestro interés, en la siguiente captura se puede observar una consulta en base64 con el valor Mg== el cual representa el número decimal 2.
-
-![Captura_Encoding]()
 
 Otra forma en la que podemos explotar un IDOR es mediante las consultas que usen funciones Hash, a primera vista pareciera ser un valor al azahar pero entendiendo el funcionamiento del algoritmo Hash sabemos que si encontramos el valor empleado para la funcion podremos replicarla, para esto se puede hacer uso de un Hash identifier.
 
@@ -54,15 +52,15 @@ Para la siguiente misión se nos solicita encontrar el **user_id** del hijo naci
 2. Seleccionamos el parámetro <id_base64> y le damos al botón de add. 
 3. Configuraremos el Payload definiendo tipo como numerico, el rango de números a probar y añadiremos una regla que codifique en base64 estos valores
 
-![Configuración del payload]()
+![Configuración del payload](img/Payload_configuration.png)
 
 4. Dentro de settings en la parte Grep-Match añadiremos la fecha de nacimiento que nos dieron, así ya no tendremos que buscar dentro de cada consulta para encontrarlo. 
 
-![Configuración Grep-Match]()
+![Configuración Grep-Match](img/Grep-match.png)
 
 5. Por último lanzamos el ataque y buscamos la consulta que coincida con nuestra búsqueda.
 
-![Resultados del ataque]()
+![Resultados del ataque](img/Resultado.png)
 
 Finalmente encontramos que el id solicitado es el 19. 
 
