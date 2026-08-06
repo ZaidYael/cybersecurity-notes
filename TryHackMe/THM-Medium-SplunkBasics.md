@@ -27,3 +27,26 @@ Para responder a las preguntas de investigación del laboratorio, se aplicó una
 El primer paso en Splunk consiste en especificar el conjunto de datos sobre el cual queremos trabajar mediante el parámetro `index`:
 ```spl
 index="main"
+``` 
+### Encontrando la IP del atacante
+
+Como primer actividad sospechosa encontramos dentro de la gráfica se observan unos picos de actividad irregulares, en segundo lugar dentro de los **user_agent** hay algunos comandos inusuales como wget, curl, zgrab y sqlmap. 
+
+Para filtrar nuestros resultados y acercarnos a nuestro atacante emplearemos la siguiente consulta excluyendo los agentes conocidos: 
+
+```index=main sourcetype=web_traffic user_agent!=*Mozilla* user_agent!=*Chrome* user_agent!=*Safari* user_agent!=*Firefox* ```  
+
+Con este filtro observamos que solo nos queda una ip relacionada a toda la actividad, por ende está es la ip del atacante 
+
+imagen 
+
+### ¿Qué día hubo más tráfico de logs?
+
+Para responder esta pregunta haremos uso del comando timechart y el parámetro span=1d para contar por cada día, nuestra consulta completa quedaría de la siguiente forma: 
+
+index=main sourcetype=web_traffic | timechart span=1d count | sort by count | reverse
+
+Hacemos uso de reverse para que aparezca como primer valor el máximo.
+
+El día que hubo más tráfico en los logs fue el 2025-10-12.
+
