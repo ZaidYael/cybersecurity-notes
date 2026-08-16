@@ -10,3 +10,4 @@ En esta sección se encuentran los reportes técnicos de las salas y rutas compl
 | **PickleRick** (THM) | Fácil | Web Enumeration, Gobuster, Command Injection Bypass (`less`), Linux PrivEsc (`sudo -l`) | [Ver Reporte](./THM-Easy-PickleRick.md) |
 | **n8n CVE 2025 68613** (THM) | Fácil | CVE Analysis, Remote Code Execution (RCE), Vulnerability Exploitation | [Ver Reporte](./THM-Easy-n8n_CVE_2025_68613.md) |
 | **Santa's Little IDOR** | Medio | OWASP Top 10, IDOR, Parameter Tampering, Burp Suite / Intruder | [Ver Reporte](./THM-Medium-Santa's-Little-IDOR.md) |
+| **Splunk Basics** | Medio | Blue Team, SIEM, Log Analysis, SPL (Search Processing Language) | [Ver Reporte](./THM-Medium-SplunkBasics.md) |
