@@ -68,7 +68,7 @@ Al ejecutar encontramos que hay **993** eventos registrados con dicho agente.
 
 `sourcetype=firewall_logs src_ip="10.10.1.5" AND dest_ip="198.51.100.55" AND action="ALLOWED" | table _time, action, protocol, src_ip, dest_ip, dest_port, reason`
 
-[!Información comprometida](img/info_comprometida.png)
+![Información comprometida](img/info_comprometida.png)
 
 Con este comando nos muestra toda la información que ha sido enviada con éxito a la dirección del atacante, ahora solo falta sumar la cantidad de bytes para resolver la pregunta. 
 
