@@ -59,7 +59,7 @@ Una vez que ya tenemos los **logs** estructurados con `Zeek`, los vamos a import
   rita import --logs ~/zeek_logs/rita_challenge/ --database rita_challenge
 ```
 
-![Importación de los logs en RITA](TryHackMe/img/import_logs_rita.png)
+![Importación de los logs en RITA](img/import_logs_rita.png)
 
 ### Paso 3: Visualización e Investigación 
 Para acceder a la interfaz de terminal interactiva de RITA ejecutamos:
@@ -67,7 +67,7 @@ Para acceder a la interfaz de terminal interactiva de RITA ejecutamos:
   rita view rita_challenge
 ``` 
 
-![RITA view](TryHackMe/img/Rita_view.png)[^1]
+![RITA view](img/Rita_view.png)[^1]
 [^1]: Como se puede apreciar se divide en 3 secciones principales: barra de búsqueda, panel de recursos y panel de detalles donde podemos ver los  `Threat Modifiers`.
 
 ---
@@ -88,7 +88,7 @@ Comando aplicado:
  dst:rabbithole.malhare.net beacon:>=70 sort:duration-desc
 ```
 
-![Resultados del filtro](TryHackMe/img/Result_filters_rita.png)[^2]
+![Resultados del filtro](img/Result_filters_rita.png)[^2]
 [^2]: Se observan los resultados del filtro (aquellos con un porcentaje de beacon mayor al 70%)
 ---
 
