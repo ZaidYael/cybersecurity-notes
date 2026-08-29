@@ -18,7 +18,7 @@
 * **Herramientas utilizadas:** Splunk Search & Reporting App, lenguaje SPL, filtros por campos.
 
 ---
-
+  
 ## 3. Metodología de Análisis y Sintaxis SPL
 
 Para responder a las preguntas de investigación del laboratorio, se aplicó una metodología estructurada dividida en tres pasos clave:
@@ -28,7 +28,7 @@ El primer paso en Splunk consiste en especificar el conjunto de datos sobre el c
 ```spl
 index="main"
 ```
-![Gráfica de acxtividad](img/grafica.png)
+![Gráfica de actividad](img/grafica.png)
 
 ### 1. Encontrando la IP del atacante
 
