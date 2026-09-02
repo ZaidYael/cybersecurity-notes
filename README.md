@@ -12,4 +12,4 @@ El repositorio está organizado por plataformas y categorías para facilitar la 
 
 - `/TryHackMe/` - Reportes de salas, retos y rutas de aprendizaje.
 - `/HackTheBox/` - Write-ups de máquinas y desafíos específicos.
-- `/Local-Labs/` - Prácticas de infraestructura propia, redes y configuraciones locales.
+- `/Soc-Labs/` - Prácticas de infraestructura propia, redes y configuraciones locales.
