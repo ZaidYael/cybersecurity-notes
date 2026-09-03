@@ -20,3 +20,11 @@ Despliegue y configuración de un entorno completo de Centro de Operaciones de S
 | **05** | **File Integrity Monitoring & Reglas XML** | Monitoreo en tiempo real de directorios sensibles y reglas personalizadas para cuentas *Guest*. | ⏳ Próximamente |
 | **06** | **Active Response (SOAR)** | Automatización de mitigación: bloqueo perimetral en iptables ante ataques de fuerza bruta SSH. | ⏳ Próximamente |
 | **07** | **Investigación Forense & Triaje L1** | Reconstrucción de la cadena de intrusión, análisis de IoCs e informe formal de incidente. | ⏳ Próximamente |
+
+## 🔍 Eventos Extra, Triaje L1 y Detecciones No Planificadas
+
+Registro de anomalías reales, falsos positivos y actividades operativas depuradas durante el funcionamiento continuo del SIEM:
+
+| Fecha / Contexto | Tipo de Evento | Regla / Componente Afectado | Análisis y Acción de Triaje | Documentación |
+| :---: | :--- | :--- | :--- | :---: |
+| **Día 1** | **Falso Positivo:** Detección de binario modificado (`diff`) | `Rule ID: 510` (Rootcheck) | Verificación de integridad con `dpkg -V diffutils` y supresión mediante directiva `<ignore>` en `ossec.conf`. | [Ver Análisis](./Análisis-de-falso-positivo-rootcheck-rule-id-510) |
