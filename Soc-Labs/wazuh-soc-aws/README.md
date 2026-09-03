@@ -27,4 +27,4 @@ Registro de anomalías reales, falsos positivos y actividades operativas depurad
 
 | Fecha / Contexto | Tipo de Evento | Regla / Componente Afectado | Análisis y Acción de Triaje | Documentación |
 | :---: | :--- | :--- | :--- | :---: |
-| **Día 1** | **Falso Positivo:** Detección de binario modificado (`diff`) | `Rule ID: 510` (Rootcheck) | Verificación de integridad con `dpkg -V diffutils` y supresión mediante directiva `<ignore>` en `ossec.conf`. | [Ver Análisis](./Análisis-de-falso-positivo-rootcheck-rule-id-510) |
+| **Día 1** | **Falso Positivo:** Detección de binario modificado (`diff`) | `Rule ID: 510` (Rootcheck) | Verificación de integridad con `dpkg -V diffutils` y supresión mediante directiva `<ignore>` en `ossec.conf`. | [Ver Análisis](Soc-Labs/wazuh-soc-aws/Análisis-de-falso-positivo-rootcheck-rule-id-510.md) |
