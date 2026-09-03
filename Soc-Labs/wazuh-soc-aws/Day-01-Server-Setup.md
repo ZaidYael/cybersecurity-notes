@@ -21,7 +21,8 @@
   * `Port 1514 (TCP):` Ingesta de eventos y comunicación cifrada con los agentes.
   * `Port 1515 (TCP):` Registro y enrolamiento automatizado de agentes.
 
-![Topología del Laboratorio](../img/aws_architecture_animation.mp4)
+![Topología del Laboratorio](https://github.com/ZaidYael/cybersecurity-notes/blob/5cc4a8fe31fea66978842ccc06be451443951205/Soc-Labs/img/aws_architecture_animation.gif)
+
 
 ---
 
