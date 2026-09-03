@@ -51,7 +51,7 @@ Para validar si se trataba de una intrusión real o un falso positivo, se proced
 ### Fase 1: Verificar integridad contra el repositorio de paquetes
 Se empleó el verificador del gestor de paquetes de Ubuntu `dpkg` de esta manera comparamos la estructura del binario con la firma original del desarrollador: 
 
-![Comprobación de firma](Soc-Labs/img/comprobación.png)
+![Comprobación de firma](../img/comprobación.png)
 
 El comando no arrojó discrepancias de salida, lo que confirma que la herramienta no ha sido alterada. 
 A su vez se comprobó el propietario del archivo con el comando `dpkg -S /usr/bin/diff`
