@@ -21,7 +21,8 @@
   * `Port 1514 (TCP):` Ingesta de eventos y comunicación cifrada con los agentes.
   * `Port 1515 (TCP):` Registro y enrolamiento automatizado de agentes.
 
-![Tpología del Laboratorio](./img/aws_architecture_animation.gif)
+![Topología del Laboratorio](../img/aws_architecture_animation.mp4)
+
 ---
 
 ## 3. Fundamentos Teóricos: Ingesta por Alertas vs. Archives
