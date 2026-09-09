@@ -11,4 +11,4 @@ Repositorio de laboratorios de arquitectura propia, detección de amenazas, tele
 
 | Laboratorio / Entorno | Tipo | Tecnologías Clave | Estado | Documentación |
 | :--- | :---: | :--- | :---: | :---: |
-| **Wazuh SOC Analyst Lab** | Cloud (AWS) | Wazuh SIEM/XDR, Sysmon, FIM, XML Rules, Active Response | En Proceso (Día 1/7) | [Ver Proyecto](./wazuh-soc-aws/README.md) |
+| **Wazuh SOC Analyst Lab** | Cloud (AWS) | Wazuh SIEM/XDR, Sysmon, FIM, XML Rules, Active Response | En Proceso (Día 2/7) | [Ver Proyecto](./wazuh-soc-aws/README.md) |
