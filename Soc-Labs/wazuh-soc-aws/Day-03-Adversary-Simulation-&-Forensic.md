@@ -1,4 +1,4 @@
-# 📡 [Write-up] Día 3: Simulación Adversaria y Análisis Forense de Telemetría 
+# 🔎 [Write-up] Día 3: Simulación Adversaria y Análisis Forense de Telemetría 
 
 ![AWS](https://img.shields.io/badge/Plataforma-AWS_EC2-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![Wazuh](https://img.shields.io/badge/SIEM-Wazuh_v4.9-00A4E4?style=for-the-badge)
@@ -101,31 +101,36 @@ Tras generar las acciones adversarias, se procedió a auditar los logs crudos ca
 | Y |	Representa una serie de valores de subauthoridad, donde n es el número de valores. |
 
 
-1. Detección de Creación y Modificación de Cuentas en Windows
+### 1. Detección de Creación y Modificación de Cuentas en Windows
 
-    Filtro Aplicado: data.win.system.eventId: "4720"
+Filtro Aplicado: data.win.system.eventId: "4720"
 
-    Resultado: Se confirmó la captación del evento en el momento exacto en que la cuenta Guest fue activada, identificando el usuario de origen que ejecutó la acción (Administrator) y el objetivo modificado (TargetUserName: Guest).
+Resultado: Se confirmó la captación del evento en el momento exacto en que la cuenta Guest fue activada, identificando el usuario de origen que ejecutó la acción (Administrator) y el objetivo modificado (TargetUserName: Guest).
 
-    ![event 4720]()
+   ![event 4720](../event_4720.png)
 
-2. 4624 -> an account was successfully logged on 
+### 2. 4624 -> an account was successfully logged on
+   ![event 4624](../sucess_logon.png)
 
-4732 -> a member was added to a security-enabled local group.
+### 3. 4732 -> a member was added to a security-enabled local group.
+   ![event 473](../event_4732.png)
 
-2. Detección de Inicios de Sesión SSH Fallidos en Linux
+### 4. Detección de Inicios de Sesión SSH Fallidos en Linux
 
-    Filtro Aplicado: agent.name: "Linux-Endpoint" AND data.srcip: "*" AND "Failed password"
+Filtro Aplicado: agent.name: "Linux-Endpoint" AND data.srcip: "*" AND "Invalid user"
 
-    Resultado: Wazuh ingirió correctamente los eventos de sshd, extrayendo en campos estructurados como data.srcuser el nombre del usuario atacado (admin) y la IP origen del atacante (data.srcip).
+Resultado: Wazuh ingirió correctamente los eventos de sshd, extrayendo en campos estructurados como data.srcuser el nombre del usuario atacado (admin) y la IP origen del atacante (data.srcip).
 
-6. Conclusiones y Lecciones Aprendidas
+![invalid user](invalid_user.png)
+   
 
-    Validación del Enfoque "Archives": Confirmar que la activación del módulo Archives (wazuh-archives-*) realizada en el Día 1 fue crucial para visibilizar eventos contextuales que no necesariamente disparan alertas predeterminadas del SIEM de nivel alto.
+## 6. Conclusiones y Lecciones Aprendidas
 
-    Correlación de Event IDs: El monitoreo defensivo en Windows no debe basarse solo en inicios de sesión (4624/4625), sino en eventos de gestión de cuentas (4720, 4738, 4732), ya que son los indicadores primarios de persisencia adversaria.
+Validación del Enfoque "Archives": Confirmar que la activación del módulo Archives (wazuh-archives-*) realizada en el Día 1 fue crucial para visibilizar eventos contextuales que no necesariamente disparan alertas predeterminadas del SIEM de nivel alto.
 
-    Simulación para la Creación de Reglas: Experimentar el rol del atacante (Red Team) genera la perspectiva requerida para el Día 4 y 5, permitiendo saber exactamente qué campos utilizar (data.win.eventdata.targetUserName, data.srcuser) para diseñar Dashboards y Reglas XML personalizadas.
+Correlación de Event IDs: El monitoreo defensivo en Windows no debe basarse solo en inicios de sesión (4624/4625), sino en eventos de gestión de cuentas (4720, 4738, 4732), ya que son los indicadores primarios de persisencia adversaria.
+
+Simulación para la Creación de Reglas: Experimentar el rol del atacante (Red Team) genera la perspectiva requerida para el Día 4 y 5, permitiendo saber exactamente qué campos utilizar (data.win.eventdata.targetUserName, data.srcuser) para diseñar Dashboards y Reglas XML personalizadas.
 
 
 
