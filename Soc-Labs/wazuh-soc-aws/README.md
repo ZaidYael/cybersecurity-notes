@@ -15,7 +15,7 @@ Despliegue y configuración de un entorno completo de Centro de Operaciones de S
 | :---: | :--- | :--- | :---: |
 | **01** | **Servidor Central & Ingesta de Logs** | Despliegue en EC2, Security Groups y activación de *Archives* para telemetría cruda. | [Ver Write-up](./Day-01-Server-Setup.md) |
 | **02** | **Despliegue de Agentes & Sysmon** | Instalación de agentes en Windows/Linux y configuración del canal Sysmon/Operational. | [Ver Write-up](./Day-02-Agents-Sysmon.md) |
-| **03** | **Telemetría & Simulación Adversaria** | Ejecución de técnicas de reconocimiento, creación/borrado de cuentas y análisis de Event IDs. | ⏳ Próximamente |
+| **03** | **Telemetría & Simulación Adversaria** | Ejecución de técnicas de reconocimiento, creación/borrado de cuentas y análisis de Event IDs. |![Ver Write-up](./Day-03-Adversary-Simulation-&-Forensic.md)|
 | **04** | **Construcción de Dashboards SOC** | Paneles de métricas (4625), gráficos temporales y tablas de auditoría de conexiones SSH. | ⏳ Próximamente |
 | **05** | **File Integrity Monitoring & Reglas XML** | Monitoreo en tiempo real de directorios sensibles y reglas personalizadas para cuentas *Guest*. | ⏳ Próximamente |
 | **06** | **Active Response (SOAR)** | Automatización de mitigación: bloqueo perimetral en iptables ante ataques de fuerza bruta SSH. | ⏳ Próximamente |
