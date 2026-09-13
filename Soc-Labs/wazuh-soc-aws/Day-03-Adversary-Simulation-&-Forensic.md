@@ -107,13 +107,13 @@ Filtro Aplicado: data.win.system.eventId: "4720"
 
 Resultado: Se confirmó la captación del evento en el momento exacto en que la cuenta Guest fue activada, identificando el usuario de origen que ejecutó la acción (Administrator) y el objetivo modificado (TargetUserName: Guest).
 
-   ![event 4720](../event_4720.png)
+   ![event 4720](../img/event_4720.png)
 
 ### 2. 4624 -> an account was successfully logged on
-   ![event 4624](../sucess_logon.png)
+   ![event 4624](../img/sucess_logon.png)
 
 ### 3. 4732 -> a member was added to a security-enabled local group.
-   ![event 473](../event_4732.png)
+   ![event 473](../img/event_4732.png)
 
 ### 4. Detección de Inicios de Sesión SSH Fallidos en Linux
 
@@ -121,7 +121,7 @@ Filtro Aplicado: agent.name: "Linux-Endpoint" AND data.srcip: "*" AND "Invalid u
 
 Resultado: Wazuh ingirió correctamente los eventos de sshd, extrayendo en campos estructurados como data.srcuser el nombre del usuario atacado (admin) y la IP origen del atacante (data.srcip).
 
-![invalid user](invalid_user.png)
+![invalid user](../img/invalid_user.png)
    
 
 ## 6. Conclusiones y Lecciones Aprendidas
