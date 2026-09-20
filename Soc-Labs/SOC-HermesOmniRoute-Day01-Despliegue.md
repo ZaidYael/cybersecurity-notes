@@ -1,4 +1,4 @@
-# 🤖 [Proyecto] Despliegue de Agente Autónomo Local con Hermes Agent y OmniRoute Gateway — Día 1: Arquitectura y Despliegue
+# 🤖 [Proyecto] Despliegue de Agente Autónomo Local con Hermes Agent y OmniRoute Gateway
 
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![Hermes Agent](https://img.shields.io/badge/Hermes_Agent-0052CC?style=for-the-badge)
@@ -28,9 +28,7 @@
 
 ## 2. Objetivo y Motivación
 
-La proliferación de modelos de lenguaje aplicados a ciberseguridad requiere entornos robustos capaces de procesar gran volumen de contexto (write-ups, análisis de logs, perfiles de habilidades y ofertas laborales). Muchos proveedores de inferencia imponen restricciones severas de tokens por minuto o cuotas de salida.
-
-El propósito de este proyecto fue diseñar e implementar una arquitectura local desacoplada donde el agente de ejecución (Hermes Agent) interactúe con un proxy inteligente (OmniRoute Gateway). Esto garantiza alta disponibilidad mediante balanceo y mecanismos de respaldo (*fallbacks*) en caliente, permitiendo una automatización fluida para tareas de perfilamiento profesional y análisis de seguridad.
+Mi principal objetivo fue diseñar una herramienta que me ayudara a buscar prácticas de ciberseguridad basandose en mi CV y que me diera un porcentaje de que tan compatible es mi perfil de acuerdo a lo que solicitan, para esto había escuchado de Hermes y OpenClaw pero no los había llevado a la práctica, a si mismo omniroute llamó mi atención por la manera de eficientar el uso de tokens y rotar entre distintos modelos de IA para cumplir con lo que se solicita. 
 
 ---
 
