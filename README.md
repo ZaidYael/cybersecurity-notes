@@ -11,5 +11,4 @@ Este repositorio aloja mis reportes técnicos (write-ups) y documentación de la
 El repositorio está organizado por plataformas y categorías para facilitar la navegación:
 
 - `/TryHackMe/` - Reportes de salas, retos y rutas de aprendizaje.
-- `/HackTheBox/` - Write-ups de máquinas y desafíos específicos.
 - `/Soc-Labs/` - Prácticas de infraestructura propia, redes y configuraciones locales.
