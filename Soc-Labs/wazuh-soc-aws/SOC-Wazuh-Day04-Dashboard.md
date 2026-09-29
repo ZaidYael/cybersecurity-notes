@@ -142,7 +142,7 @@ Esta tabla permite al analista correlacionar de forma rápida qué comandos o pr
 
 ### Dashboard Final
 
-![Dashboard SOC con los tres paneles terminados](img/SOC-Wazuh-Day04-dashboard-final.png)[^1]
+![Dashboard SOC con los tres paneles terminados](../img/Dashboard.png)[^1]
 [^1]: Vista completa del dashboard con los paneles: Failed Windows Logon (métrica), Windows Account Changes Over Time (línea) y Sysmon Activities (tabla de datos).
 
 ---
